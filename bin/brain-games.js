@@ -1,3 +1,5 @@
 #!/usr/bin/env node
 
-console.log('node bin/brain-games.js\n Welcome to the Brain Games!')
+import {HelloUser} from '../src/cli.js';
+
+HelloUser() //вызов функции приветсвия и вопроса у пользователя

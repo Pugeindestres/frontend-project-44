@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/Pugeindestres/frontend-project-44#readme",
   "dependencies": {
-    "link": "^2.1.1"
+    "link": "^2.1.1",
+    "readline-sync": "^1.4.10"
   },
-
   "bin": {
     "brain-games": "bin/brain-games.js"
   }
