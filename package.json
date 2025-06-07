@@ -19,11 +19,13 @@
   "homepage": "https://github.com/Pugeindestres/frontend-project-44#readme",
   "dependencies": {
     "link": "^2.1.1",
+    "random": "^5.4.0",
     "readline-sync": "^1.4.10"
   },
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js"
+    "brain-even": "bin/brain-even.js",
+    "brain-calc": "bin/brain-calc.js"
   },
   "devDependencies": {
     "@eslint/js": "^9.28.0",
@@ -32,5 +34,5 @@
   },
 
   "make lint": "npx eslint"
-  
+
 }

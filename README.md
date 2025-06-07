@@ -8,3 +8,4 @@
    npm install -g .
 3. Запускаете игру в терминале:
     brain-even
+    brain-calc
