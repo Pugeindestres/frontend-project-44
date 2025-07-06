@@ -9,3 +9,4 @@
 3. Запускаете игру в терминале:
     brain-even
     brain-calc
+    brain-gcd
