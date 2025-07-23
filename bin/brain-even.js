@@ -4,7 +4,8 @@
 /* eslint-disable no-unused-vars */
 
 import readlineSync from 'readline-sync';
-import {HelloUser, randomNumber, even} from '../src/cli.js';
+import {HelloUser} from '../src/cli.js';
+import {randomNumber, even} from '../src/index.js'
 
 export function gamesEven(){ // функция логики игры
     const name = HelloUser();
