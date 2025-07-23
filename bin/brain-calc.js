@@ -8,6 +8,7 @@ const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
   return operators[getRandomInt(0, operators.length - 1)];
 };
+
 const generateQuestion = () => {
   const num1 = getRandomInt(1, 50);
   const num2 = getRandomInt(1, 50);
