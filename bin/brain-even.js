@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 //* eslint-disable no-const-assign */
 //* eslint-disable no-undef */
- 
 
 import readlineSync from 'readline-sync';
 
@@ -26,7 +25,6 @@ for (let round = 1; round <= roundsCount; round += 1) {
   const correctAnswer = isEven(questionNumber) ? 'yes' : 'no';
 
   if (userAnswer !== 'yes' && userAnswer !== 'no') {
-    // Любой некорректный ввод считается ошибкой
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
     console.log(`Let's try again, ${userName}!`);
     process.exit(1);
