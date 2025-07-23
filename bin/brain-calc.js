@@ -3,11 +3,13 @@
 import readlineSync from 'readline-sync';
 import {HelloUser} from '../src/cli.js';
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-const getRandomOperator = () => {
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function getRandomOperator() {
   const operators = ['+', '-', '*'];
   return operators[getRandomInt(0, operators.length - 1)];
-};
+}
 
 const generateQuestion = () => {
   const num1 = getRandomInt(1, 50);
