@@ -6,4 +6,5 @@ export function HelloUser() { //функция коотрая спрашивае
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}`)
   console.log(`Welcom to brain-games, ${name}!`);
+  return name;
 }
