@@ -28,5 +28,7 @@ const brainProgression = () => {
     console.log(`Let's try again, ${name}!`);
     return;
   }
+  // Можно добавить больше вопросов, если хотите
+  console.log(`Congratulations, ${name}!`);
 };
 brainProgression();
