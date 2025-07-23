@@ -5,6 +5,8 @@ const getProgression = (start, step, length) => {
   return Array.from({ length }, (_, index) => start + index * step);
 };
 
+const getHiddenIndex = (length) => Math.floor(Math.random() * length);
+
 const brainProgression = () => {
   const name = HelloUser();
   console.log('What number is missing in the progression?');
