@@ -5,20 +5,23 @@ import { defineConfig } from "eslint/config";
 export default defineConfig([
   {
     files: ["**/*.{js,mjs,cjs}"],
-    plugins: { js },
     extends: ["js/recommended"],
     languageOptions: {
       globals: {
         ...globals.browser,
         ...globals.node,
-        // Можно добавить другие глобалы, например:
-        // es2021 включает современные глобалы, их можно явно не указывать,
-        // но если нужно, можно добавить вручную
       },
       parserOptions: {
         ecmaVersion: 2021,
         sourceType: "module",
       },
+    },
+    rules: {
+      // Пример: включить правило для точек с запятой (требовать или запрещать)
+      "semi": ["error", "never"], // если хотите запретить точки с запятой
+      // или
+      // "semi": ["error", "always"], // если хотите требовать точки с запятой
+      // Добавьте другие правила по необходимости
     },
   },
 ]);
