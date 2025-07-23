@@ -21,13 +21,12 @@ const brainProgression = () => {
   const answer = readlineSync.question('Your answer: ');
   if (parseInt(answer, 10) === hiddenValue) {
     console.log('Correct!');
-    console.log(`Let's try again, ${name}!`);
+    console.log(`Congratulations, ${name}!`);
   } else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${hiddenValue}'.`);
-    console.log(`Let's try again, ${name}!`);
     return;
   }
   // Можно добавить больше вопросов, если хотите
-  console.log(`Congratulations, ${name}!`);
+  console.log(`Let's try again, ${name}!`);
 };
 brainProgression();
