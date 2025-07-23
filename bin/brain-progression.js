@@ -24,6 +24,7 @@ const brainProgression = () => {
     console.log(`Congratulations, ${name}!`);
   } else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${hiddenValue}'.`);
+    console.log(`Let's try again, ${name}!`);
     return;
   }
   // Можно добавить больше вопросов, если хотите
