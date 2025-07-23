@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import { HelloUser } from '../src/index.js';
 const getProgression = (start, step, length) => {
   return Array.from({ length }, (_, index) => start + index * step);
 };
 
 const getHiddenIndex = (length) => Math.floor(Math.random() * length);
 const brainProgression = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+  const name = HelloUser();
   console.log('What number is missing in the progression?');
+
   const length = Math.floor(Math.random() * 6) + 5; // Длина от 5 до 10
   const start = Math.floor(Math.random() * 100);
   const step = Math.floor(Math.random() * 10) + 1; // Шаг от 1 до 10

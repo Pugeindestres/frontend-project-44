@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
+import { HelloUser } from '../src/index.js';
 
 
 // Функция для вычисления НОД
@@ -16,9 +17,7 @@ const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)
 
 // Основная логика игры
 const playgcd = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+  const name = HelloUser();
   console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < 3; i++) {
     const num1 = getRandomNumber(1, 100);
