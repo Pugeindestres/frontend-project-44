@@ -4,29 +4,41 @@
 /* eslint-disable no-unused-vars */
 
 import readlineSync from 'readline-sync';
-import {HelloUser} from '../src/cli.js';
-import {randomNumber, even} from '../src/index.js'
 
-export function gamesEven(){ // функция логики игры
-    const name = HelloUser();
-    let correct_answers = 0;
+console.log('Welcome to the Brain Games!');
 
-    for (let i = 0; i < 3; i++){ // запускаем 3 раунда игры
-        const number = randomNumber(); 
-        const correct_answer = even(number) ? 'yes' : 'no'; //условие если число четное true, нечетное false
-        const inputUser = readlineSync.question(`Question: Is ${number} even? (yes/no) `)
+const userName = readlineSync.question('May I have your name? ');
+console.log(`Hello, ${userName}!`);
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-        if (inputUser === correct_answer) { //условие игры
-            console.log('Correct!');
-            correct_answers += 1;
-        }
-        else {
-            console.log(`Wrong! The correct answer was '${correct_answer}'.`);
-            console.log(`Let's try again, ${name}!`);
-      return;
-        }
-        console.log(`Congratulations, ${name}! You won!`);
-    }
+const roundsCount = 3;
+
+function isEven(number) {
+  return number % 2 === 0;
 }
-gamesEven();
 
+for (let round = 1; round <= roundsCount; round += 1) {
+  const questionNumber = Math.floor(Math.random() * 100) + 1; // число от 1 до 100
+  console.log(`Question: ${questionNumber}`);
+
+  const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
+
+  const correctAnswer = isEven(questionNumber) ? 'yes' : 'no';
+
+  if (userAnswer !== 'yes' && userAnswer !== 'no') {
+    // Любой некорректный ввод считается ошибкой
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    console.log(`Let's try again, ${userName}!`);
+    process.exit(1);
+  }
+
+  if (userAnswer === correctAnswer) {
+    console.log('Correct!');
+  } else {
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    console.log(`Let's try again, ${userName}!`);
+    process.exit(1);
+  }
+}
+
+console.log(`Congratulations, ${userName}!`);
