@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 //* eslint-disable no-const-assign */
 //* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
+ 
 
 import readlineSync from 'readline-sync';
 
