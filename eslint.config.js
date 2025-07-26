@@ -15,6 +15,7 @@ export default [
     plugins: {
       js: pluginJs,
     },
+    extends: ["plugin:js/recommended", "airbnb"],
     rules: {
       "no-console": "off",
       "import/extensions": "off",
