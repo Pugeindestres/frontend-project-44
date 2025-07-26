@@ -2,6 +2,7 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 
 export default [
+  pluginJs.configs.recommended, // вместо "plugin:js/recommended"
   {
     files: ["**/*.{js,mjs,cjs}"],
     languageOptions: {
@@ -12,10 +13,6 @@ export default [
       ecmaVersion: 2021,
       sourceType: "module",
     },
-    plugins: {
-      js: pluginJs,
-    },
-    extends: ["plugin:js/recommended", "airbnb"],
     rules: {
       "no-console": "off",
       "import/extensions": "off",
