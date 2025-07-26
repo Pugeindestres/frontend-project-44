@@ -1,24 +1,16 @@
-import js from "@eslint/js";
-import globals from "globals";
-import { defineConfig } from "eslint/config";
+import globals from 'globals';
+import pluginJs from '@eslint/js';
 
-export default defineConfig([
+/** @type {import('eslint').Linter.Config[]} */
+export default [
   {
-    files: ["**/*.{js,mjs,cjs}"],
-    extends: ["js/recommended"],
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
-      parserOptions: {
-        ecmaVersion: 2021,
-        sourceType: "module",
-      },
-    },
+    languageOptions: { globals: globals.browser },
+  },
+  {
     rules: {
-      semi: ["error", "never"], // запрещаем точки с запятой
-      // можно добавить другие правила по желанию
+      'no-confole': 'off',
+      'import/extensions': 'off',
     },
   },
-]);
+  pluginJs.configs.recommended,
+];
