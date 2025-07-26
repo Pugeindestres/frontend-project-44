@@ -1,26 +1,23 @@
 import globals from "globals";
-import pluginJs from '@eslint/js';
+import pluginJs from "@eslint/js";
 
-export default ([
+export default [
   {
     files: ["**/*.{js,mjs,cjs}"],
     languageOptions: {
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
       ecmaVersion: 2021,
       sourceType: "module",
     },
-    env: {
-      node: true,
-      es2021: true,
-      browser: true,
+    plugins: {
+      js: pluginJs,
     },
-    extends: [
-      "airbnb",
-    ],
     rules: {
-      // здесь ваши правила, например:
-      'no-confole': 'off',
-      'import/extensions': 'off',
+      "no-console": "off",
+      "import/extensions": "off",
     },
   },
-]);
+];
