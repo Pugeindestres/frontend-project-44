@@ -1,8 +1,10 @@
+// eslint.config.js
 import globals from "globals";
 import pluginJs from "@eslint/js";
 
 export default [
-  pluginJs.configs.recommended,
+  
+  pluginJs.configs.recommended, // импорт рекомендуемых правил плагина js
   {
     files: ["**/*.{js,mjs,cjs}"],
     languageOptions: {
@@ -16,6 +18,7 @@ export default [
     rules: {
       "no-console": "off",
       "import/extensions": "off",
+      // Добавьте свои правила здесь
     },
   },
 ];
