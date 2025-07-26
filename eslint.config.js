@@ -1,7 +1,7 @@
 import globals from "globals";
-import { defineConfig } from "eslint/config";
+import pluginJs from '@eslint/js';
 
-export default defineConfig([
+export default ([
   {
     files: ["**/*.{js,mjs,cjs}"],
     languageOptions: {
@@ -19,7 +19,8 @@ export default defineConfig([
     ],
     rules: {
       // здесь ваши правила, например:
-      // "no-console": "off",
+      'no-confole': 'off',
+      'import/extensions': 'off',
     },
   },
 ]);
