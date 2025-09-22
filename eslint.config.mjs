@@ -1,6 +1,24 @@
+// eslint.config.js
 import globals from "globals";
-import { defineConfig } from "eslint/config";
+import pluginJs from "@eslint/js";
 
-export default defineConfig([
-  { files: ["**/*.{js,mjs,cjs}"], languageOptions: { globals: globals.browser } },
-]);
+export default [
+  
+  pluginJs.configs.recommended, // импорт рекомендуемых правил плагина js
+  {
+    files: ["**/*.{js,mjs,cjs}"],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+      ecmaVersion: 2021,
+      sourceType: "module",
+    },
+    rules: {
+      "no-console": "off",
+      "import/extensions": "off",
+      // Добавьте свои правила здесь
+    },
+  },
+];
