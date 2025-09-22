@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+
+
 import readlineSync from 'readline-sync';
 import { HelloUser } from '../src/cli.js';
 const getProgression = (start, step, length) => {
