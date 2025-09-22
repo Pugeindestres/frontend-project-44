@@ -2,7 +2,7 @@
 
 
 import readlineSync from 'readline-sync';
-import { HelloUser } from './src/cli.js';
+import { HelloUser } from '../src/cli.js';
 const getProgression = (start, step, length) => {
     return Array.from({ length }, (_, index) => start + index * step);
 };
