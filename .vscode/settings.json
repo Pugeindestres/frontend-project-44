@@ -1,0 +1,12 @@
+{
+  "makefile.configureOnOpen": true,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "markdown.updateLinksOnFileMove.enabled": "always",
+  "eslint.useFlatConfig": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript"
+  ]
+}
