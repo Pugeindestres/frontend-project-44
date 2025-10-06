@@ -1,6 +1,17 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Pugeindestres/frontend-project-44#readme",
+  "bugs": {
+    "url": "https://github.com/Pugeindestres/frontend-project-44/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pugeindestres/frontend-project-44.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
   "bin": {
     "brain-games": "./bin/brain-games.js",
@@ -10,6 +21,10 @@
     "brain-progression": "./bin/brain-progression.js",
     "brain-prime": "./bin/brain-prime.js"
   },
+    "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
