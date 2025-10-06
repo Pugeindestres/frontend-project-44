@@ -20,7 +20,7 @@ export default [
       '@stylistic/indent': ['error', 2],
       '@stylistic/comma-dangle': ['error', 'always-multiline'],
       '@stylistic/object-curly-spacing': ['error', 'always'],
-      '@stylistic/arrow-parens': ['error', 'as-needed'],
+      '@stylistic/arrow-parens': 'off', // ОТКЛЮЧАЕМ это правило
       '@stylistic/no-trailing-spaces': 'error',
       '@stylistic/eol-last': 'error',
       '@stylistic/padded-blocks': ['error', 'never'],
